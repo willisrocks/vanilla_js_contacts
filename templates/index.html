@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Contacts</title>
+    <meta name="description" content="A simple contact management app.">
+    <meta name="author" content="Chris Fenton">
+</head>
+
+<body>
+<h1>My Contacts</h1>
+<p>Manage your person contacts without much flair!</p>
+<div id="alerts"></div>
+<div id="add-contact-form-wrapper">
+    <form id="add-contact-form" style="display: none">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="note">Note:</label><br>
+        <textarea id="note" name="note"></textarea><br>
+        <input type="submit" value="Add Contact"></input><br>
+        <input type="button" name="cancel" onclick="onClearForm()" value="Cancel"></input><br>
+    </form>
+</div>
+<div id="content"></div>
+<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
